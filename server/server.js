@@ -62,6 +62,8 @@
 
 
 
+
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
@@ -91,7 +93,7 @@ const PORT = process.env.PORT || 5000;
 // ✅ Allowed Origins for CORS (dev + prod)
 const allowedOrigins = [
   "http://localhost:5173", // Dev
-  "https://desi-dukaan-inky.vercel.app/", // Replace with your frontend domain
+  "https://desi-dukaan-inky.vercel.app", // Replace with your frontend domain
 ];
 
 app.use(
