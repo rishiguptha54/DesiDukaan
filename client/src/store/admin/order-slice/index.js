@@ -86,12 +86,19 @@
 
 
 
+
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_BASE_URL = "https://desidukaan.onrender.com/api";
+// Auto-detect API URL based on environment
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.MODE === "development"
+    ? "http://localhost:5000/api"
+    : "https://desidukaan.onrender.com/api");
 
 const initialState = {
+  isLoading: false,
   orderList: [],
   orderDetails: null,
 };
@@ -162,7 +169,3 @@ const adminOrderSlice = createSlice({
 export const { resetOrderDetails } = adminOrderSlice.actions;
 
 export default adminOrderSlice.reducer;
-
-
-
-
