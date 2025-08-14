@@ -91,7 +91,7 @@ const PORT = process.env.PORT || 5000;
 // ✅ Allowed Origins for CORS (dev + prod)
 const allowedOrigins = [
   "http://localhost:5173", // Dev
-  "https://desidukaan-frontend.vercel.app", // Replace with your frontend domain
+  "https://desi-dukaan-inky.vercel.app/", // Replace with your frontend domain
 ];
 
 app.use(
